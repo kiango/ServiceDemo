@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context="com.example.torsh.servicedemo.MainActivity">
+
+
+    <TextView
+        android:text= "@string/android_services"
+        android:layout_height="20dp"
+        android:layout_width="0dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        android:id="@+id/textView" />
+
+    <Button
+        android:id="@+id/btnStartS"
+        android:layout_width="536dp"
+        android:text="@string/start_service"
+        android:onClick="startService"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/btnStopS"
+        android:text="@string/stop_service"
+        android:layout_width="536dp"
+        android:layout_below="@+id/btnStartS"
+        android:layout_height="40dp"
+        android:layout_marginTop="9dp"
+        android:onClick="stopService"
+
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnStartS"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        />
+
+    <TextView
+        android:id="@+id/txtvSSR"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:layout_marginTop="130dp"
+
+        android:text="@string/started_service_result"
+        android:textSize="12sp"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/colorPrimary"
+        />
+
+    <Button
+        android:id="@+id/btnStartIntentService"
+        android:layout_width="536dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/start_intent_service"
+        android:onClick="startIntentService"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtvSSR"
+
+        />
+
+    <TextView
+        android:id="@+id/txtvISR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="240dp"
+        android:text="@string/intent_service_result"
+        android:textSize="12sp"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/btnStartIntentService"
+
+        android:textColor="@color/colorPrimary"
+        />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:text="@string/check_it_to_test_responsiveness"
+
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnStopS"
+        app:layout_constraintVertical_bias="0.8" />
+
+</android.support.constraint.ConstraintLayout>

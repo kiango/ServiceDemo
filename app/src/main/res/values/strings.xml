@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ServiceDemo</string>
+    <string name="android_services">Android Services</string>
+    <string name="start_service">Start Service</string>
+    <string name="stop_service">Stop Service</string>
+    <string name="check_it_to_test_responsiveness">Check it to test responsiveness</string>
+    <string name="start_intent_service">Start Intent Service</string>
+    <string name="started_service_result">Started service result</string>
+    <string name="intent_service_result">Intent service result</string>
+</resources>
