@@ -7,4 +7,10 @@
     <string name="start_intent_service">Start Intent Service</string>
     <string name="started_service_result">Started service result</string>
     <string name="intent_service_result">Intent service result</string>
+    <string name="math_result">Math Result</string>
+    <string name="add">Add</string>
+    <string name="subtract">Subtract</string>
+    <string name="multiply">Multiply</string>
+    <string name="divide">Divide</string>
+    <string name="goto_calculator">Calc Activity</string>
 </resources>

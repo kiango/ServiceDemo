@@ -70,8 +70,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-
         unregisterReceiver(myStartedServiceBroadcastReceiver);
+    }
+
+    public void move2SecondActivity(View view){
+        Intent intent = new Intent(this, SecondActivity.class);
+        startActivity(intent);
     }
 
     // creating BroadcastReceiver dynamically -> make intent filter dynamically (above)
