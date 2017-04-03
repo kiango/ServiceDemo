@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void stopService(View view) {
 
+        // explicit intent: it is only related to this MainActivity and MyStartService.class
         Intent intent = new Intent(MainActivity.this, MyStartService.class);
         stopService(intent);
     }
