@@ -1,4 +1,4 @@
-package com.example.torsh.servicedemo;
+package com.example.torsh.servicedemo.services;
 
 import android.app.IntentService;
 import android.content.Intent;

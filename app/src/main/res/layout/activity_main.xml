@@ -6,53 +6,96 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="20dp"
-    tools:context="com.example.torsh.servicedemo.MainActivity">
-
+    tools:context="com.example.torsh.servicedemo.activities.MainActivity"
+    android:id="@+id/constraintLayout"
+    >
 
     <TextView
-        android:text= "@string/android_services"
+        android:id="@+id/textView"
+        android:layout_width="55dp"
         android:layout_height="20dp"
-        android:layout_width="0dp"
 
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:text="@string/android_services"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+
+        app:layout_constraintLeft_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        android:id="@+id/textView" />
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnCalc"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginBottom="0dp"
+
+        android:onClick="move2SecondActivity"
+        android:text="@string/goto_calculator"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnStartS"
+        app:layout_constraintLeft_toRightOf="@+id/textView"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1" />
+
+    <Button
+        android:id="@+id/btnBoundService"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:textSize="12sp"
+        android:text="@string/bs_activity"
+
+        app:layout_constraintBottom_toTopOf="@+id/btnStartS"
+        app:layout_constraintLeft_toRightOf="@+id/btnCalc"
+
+        tools:layout_editor_absoluteX="210dp"
+        tools:layout_editor_absoluteY="-8dp"
+        android:onClick="move2MessengerActivity"
+        />
 
     <Button
         android:id="@+id/btnStartS"
-        android:layout_width="536dp"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
         android:text="@string/start_service"
+        android:textSize="12sp"
         android:onClick="startService"
-        android:layout_height="40dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
 
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:layout_constraintRight_creator="1"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp" />
 
     <Button
         android:id="@+id/btnStopS"
         android:text="@string/stop_service"
-        android:layout_width="536dp"
+        android:textSize="12sp"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
         android:layout_below="@+id/btnStartS"
-        android:layout_height="40dp"
-        android:layout_marginTop="9dp"
         android:onClick="stopService"
 
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnStartS"
         app:layout_constraintLeft_toLeftOf="parent"
-
-        />
+        tools:layout_constraintRight_creator="1"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp" />
 
     <TextView
         android:id="@+id/txtvSSR"
         android:layout_width="wrap_content"
         android:layout_height="17dp"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="100dp"
 
         android:text="@string/started_service_result"
         android:textSize="12sp"
@@ -61,49 +104,62 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:textColor="@color/colorPrimary"
-        />
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintLeft_creator="1" />
 
     <Button
         android:id="@+id/btnStartIntentService"
-        android:layout_width="536dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="30dp"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
         android:text="@string/start_intent_service"
+        android:textSize="12sp"
         android:onClick="startIntentService"
 
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtvSSR"
 
-        />
+        tools:layout_constraintRight_creator="1"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp" />
 
     <TextView
         android:id="@+id/txtvISR"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="240dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginStart="170dp"
+        android:layout_marginLeft="170dp"
         android:text="@string/intent_service_result"
         android:textSize="12sp"
 
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="@id/btnStartIntentService"
+        app:layout_constraintBottom_toBottomOf="@+id/btnStartIntentService"
 
         android:textColor="@color/colorPrimary"
-        />
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintHorizontal_bias="0.93"
+        app:layout_constraintVertical_bias="0.0" />
 
     <CheckBox
         android:id="@+id/checkBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="40dp"
         android:text="@string/check_it_to_test_responsiveness"
 
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnStopS"
-        app:layout_constraintVertical_bias="0.8" />
+        app:layout_constraintVertical_bias="0.568"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintHorizontal_bias="0.817" />
+
 
 </android.support.constraint.ConstraintLayout>

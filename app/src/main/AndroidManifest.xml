@@ -9,18 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <service android:name=".MyStartService" />
-        <service android:name=".MyIntentService" />
-        <service android:name=".MyBoundService" />
+        <service android:name=".services.MyStartService" />
+        <service android:name=".services.MyIntentService" />
+        <service android:name=".services.MyBoundService" />
+        <activity android:name=".activities.MyBoundActivity"/>
 
-        <activity android:name=".SecondActivity"/>
+        <activity android:name=".activities.MyMessengerActivity"/>
+        <!-- the service below has its own process, this is for Inter Process Communication -->
+        <service android:name=".services.MyMessengerService" android:process=":my_own_process" />
+
     </application>
 
 </manifest>

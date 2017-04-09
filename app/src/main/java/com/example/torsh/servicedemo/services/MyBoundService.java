@@ -1,4 +1,4 @@
-package com.example.torsh.servicedemo;
+package com.example.torsh.servicedemo.services;
 
 import android.app.Service;
 import android.content.Intent;
@@ -19,7 +19,7 @@ public class MyBoundService extends Service {
     // creating a local Binder object to help activity to bind its service
     // MyLocalBinder should return the instance of MyBoundService.java
     public class MyLocalBinder extends Binder{
-        MyBoundService getService(){
+        public MyBoundService getService(){
             return MyBoundService.this;
         }
     }

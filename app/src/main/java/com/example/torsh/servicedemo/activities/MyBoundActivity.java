@@ -1,4 +1,4 @@
-package com.example.torsh.servicedemo;
+package com.example.torsh.servicedemo.activities;
 
 import android.content.ComponentName;
 import android.content.Intent;
@@ -11,6 +11,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.torsh.servicedemo.services.MyBoundService;
+import com.example.torsh.servicedemo.R;
+
 /**
  * Created by torsh on 4/2/17.
  *
@@ -18,7 +21,7 @@ import android.widget.TextView;
  * We connect these 2 classes by creating ServiceConnection class
  */
 
-public class SecondActivity extends AppCompatActivity {
+public class MyBoundActivity extends AppCompatActivity {
 
     Boolean isBound = false;
     private MyBoundService myBoundService;
@@ -53,6 +56,7 @@ public class SecondActivity extends AppCompatActivity {
         // when activity starts we invoke the service by bindService to MyBoundService:
         Intent intent = new Intent(this, MyBoundService.class);
         bindService(intent, serviceConnection, BIND_AUTO_CREATE); // use bindService instead of start service
+        // BIND_AUTO_CREATE: automatically create services as long as components are bound to it.
     }
 
     // we ave to unbind the service when we get out of the second activity e.g. by back button

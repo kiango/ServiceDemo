@@ -1,4 +1,4 @@
-package com.example.torsh.servicedemo;
+package com.example.torsh.servicedemo.activities;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -11,6 +11,10 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+
+import com.example.torsh.servicedemo.services.MyIntentService;
+import com.example.torsh.servicedemo.services.MyStartService;
+import com.example.torsh.servicedemo.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -75,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void move2SecondActivity(View view){
-        Intent intent = new Intent(this, SecondActivity.class);
+        Intent intent = new Intent(this, MyBoundActivity.class);
         startActivity(intent);
     }
 
@@ -90,6 +94,11 @@ public class MainActivity extends AppCompatActivity {
 
         }
     };
+
+    public void move2MessengerActivity(View view) {
+        Intent intent = new Intent(this, MyMessengerActivity.class);
+        startActivity(intent);
+    }
 
 
     // To receive the data back from MyIntentService.java using ResultReceiver
